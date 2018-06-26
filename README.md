@@ -2,22 +2,22 @@
 
 ### 概念
   
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;annotation可以理解为一种修饰符，用来将一些元数据与程序的类，方法，成员变量等进行关联。
+&emsp;&emsp;annotation可以理解为一种修饰符，用来将一些元数据与程序的类，方法，成员变量等进行关联。
 
 ### 原理
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;annotation其实是通过动态代理来实现的，其中的成员变量以map形式则存储在java常量池中具体可以参考这篇文章[https://blog.csdn.net/lylwo317/article/details/52163304](https://blog.csdn.net/lylwo317/article/details/52163304)
+&emsp;&emsp;annotation其实是通过动态代理来实现的，其中的成员变量以map形式则存储在java常量池中具体可以参考这篇文章[https://blog.csdn.net/lylwo317/article/details/52163304](https://blog.csdn.net/lylwo317/article/details/52163304)
 
 ### 常见的 annotation
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;在android中常见的annotation有@Override @Deprecated @SuppressWarning等
+&emsp;&emsp;在android中常见的annotation有@Override @Deprecated @SuppressWarning等
 
     @Target(ElementType.METHOD)
     @Retention(RetentionPolicy.SOURCE)
     public @interface Override {
     }
 
-在Override中，可以看到类的类型是@interface
+&emsp;&emsp;在Override中，可以看到类的类型是@interface
 ##### @Target 也是java内置的annotation用于定义修饰的对象范围
 
 + ElementType.CONSTRUCTOR:用于描述构造器
