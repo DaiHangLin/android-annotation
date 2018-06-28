@@ -86,3 +86,5 @@
             }
         }
 
+##### 学习了解动态代理
+[链接](https://github.com/DaiHangLin/android-annotion/blob/master/dynamicProxy.md)
