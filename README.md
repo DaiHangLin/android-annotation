@@ -20,19 +20,19 @@
 &emsp;&emsp;在Override中，可以看到类的类型是@interface
 ##### @Target 也是java内置的annotation用于定义修饰的对象范围
 
-+ ElementType.CONSTRUCTOR:用于描述构造器
-+ ElementType.FIELD:用于描述域
-+ ElementType.LOCAL_VARIABLE:用于描述局部变量
-+ ElementType.METHOD:用于描述方法
-+ ElementType.PACKAGE:用于描述包
-+ ElementType.PARAMETER:用于描述参数
-+ ElementType.TYPE:用于描述类、接口(包括注解类型) 或enum声明
++ `ElementType.CONSTRUCTOR:` 用于描述构造器
++ `ElementType.FIELD:` 用于描述域
++ `ElementType.LOCAL_VARIABLE:` 用于描述局部变量
++ `ElementType.METHOD:` 用于描述方法
++ `ElementType.PACKAGE:` 用于描述包
++ `ElementType.PARAMETER:` 用于描述参数
++ `ElementType.TYPE:` 用于描述类、接口(包括注解类型) 或enum声明
 
 ##### @Retention 用于定义如何存储注解
 
-+ RetentionPolicy.SOURCE : 注解只保留在源码中，编译时会忽略
-+ RetentionPolicy.CLASS : 更高一级，编译时被编译器保留，但是运行时会被 JVM 忽略
-+ RetentionPolicy.RUNTIME : 最高级，运行时会被保留，可以被运行时访问
++ `RetentionPolicy.SOURCE :` 注解只保留在源码中，编译时会忽略
++ `RetentionPolicy.CLASS :` 更高一级，编译时被编译器保留，但是运行时会被 JVM 忽略
++ `RetentionPolicy.RUNTIME :` 最高级，运行时会被保留，可以被运行时访问
 
 ### 自定义注解
 
