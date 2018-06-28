@@ -15,10 +15,12 @@
             android:text="编译时注解"
             />
         <Button
+            android:id="@+id/proxy"
             android:layout_width="100dp"
             android:layout_height="100dp"
             />
         <Button
+            android:id="@+id/dynamicProxy"
             android:layout_width="100dp"
             android:layout_height="100dp"
             />
