@@ -13,6 +13,7 @@
 ##### 代理模式实现
 [参考链接https://web.archive.org/web/20150226062232/http://userpages.umbc.edu/~tarr/dp/lectures/DynProxies-2pp.pdf](https://web.archive.org/web/20150226062232/http://userpages.umbc.edu/~tarr/dp/lectures/DynProxies-2pp.pdf)
 
+```java
     // 接口
     public interface IVehicle {
         void start();
@@ -99,10 +100,12 @@
     I/System.out: forward
     I/System.out: VehicleProxy: End of forward()
     ...
+```
 ![](https://images2018.cnblogs.com/blog/596306/201806/596306-20180628132910410-752345194.png)
 
 ##### 使用动态代理如何实现
 
+```java
 
      // 接口
         public interface IVehicle {
@@ -168,7 +171,8 @@
     I/System.out: Vehicle Handler: Invoking forward
     I/System.out: forward
     ...
-    
+```    
+
 ![](https://images2018.cnblogs.com/blog/596306/201806/596306-20180628133007498-2015794119.png)
     
 ##### 为什么使用动态管理

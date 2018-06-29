@@ -40,15 +40,17 @@
 
 + 新建 ContentView类
 
-        @Retention(RetentionPolicy.RUNTIME)
-        @Target(ElementType.TYPE)
-        public @interface ContentView {
-            int value();
-        }
+```java
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+public @interface ContentView {
+    int value();
+}
+```
 
 + 在activity中应用
 
-
+```java
         @ContentView(R.layout.activity_main)
         public class RuntimeAnnotionActivity extends AppCompatActivity {
         
@@ -64,10 +66,11 @@
             }
     
         }
+```
 
 + 如何关联
 
-
+```java
         public class ContentViewInject {
             private ContentViewInject() {
         
@@ -85,6 +88,7 @@
                 }
             }
         }
+```
 
 ##### 学习了解动态代理
 [链接](https://github.com/DaiHangLin/android-annotion/blob/master/dynamicProxy.md)
