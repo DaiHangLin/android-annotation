@@ -1,5 +1,6 @@
 package com.explore.lin.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
@@ -26,6 +27,9 @@ public class RuntimeAnnotionActivity extends AppCompatActivity {
 
     @BindView(R.id.dynamicProxy)
     private Button btnDynamicProxy;
+
+    @BindView(R.id.classAnnotionacttivity)
+    private Button btnClassAnnotionacttivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +62,10 @@ public class RuntimeAnnotionActivity extends AppCompatActivity {
             dp.forward();
             dp.reverse();
             dp.stop();
-
+        });
+        btnClassAnnotionacttivity.setOnClickListener(l -> {
+            Intent intent = new Intent(RuntimeAnnotionActivity.this, ClassAnnotationActivity.class);
+            startActivity(intent);
         });
     }
 
