@@ -88,3 +88,6 @@
 
 ##### 学习了解动态代理
 [链接](https://github.com/DaiHangLin/android-annotion/blob/master/dynamicProxy.md)
+
+##### 学习编译期注解完成findviewbyid
+[链接](https://github.com/DaiHangLin/android-annotation/blob/master/classannotation.md)
