@@ -4,6 +4,7 @@ import com.google.auto.service.AutoService;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
+import com.squareup.javapoet.ParameterizedTypeName;
 import com.squareup.javapoet.TypeName;
 import com.squareup.javapoet.TypeSpec;
 
@@ -63,8 +64,9 @@ public class MyProcessor extends AbstractProcessor{
             TypeElement typeElement = (TypeElement) element;
             List<? extends Element> members = mElementUtils.getAllMembers(typeElement);
 
-            MethodSpec.Builder bindViewMethodSpecBuilder = MethodSpec.methodBuilder("bind")
-                    .addModifiers(Modifier.PUBLIC, Modifier.STATIC)
+            MethodSpec.Builder bindViewMethodSpecBuilder = MethodSpec.methodBuilder("inject")
+                    .addModifiers(Modifier.PUBLIC)
+                    .addAnnotation(Override.class)
                     .returns(TypeName.VOID)
                     .addParameter(ClassName.get(typeElement.asType()), "activity");
 
@@ -81,8 +83,9 @@ public class MyProcessor extends AbstractProcessor{
                 );
             }
 
-            TypeSpec typeSpec = TypeSpec.classBuilder("BindViewFor_" + element.getSimpleName())
+            TypeSpec typeSpec = TypeSpec.classBuilder(element.getSimpleName() + "_builder")
                     .addModifiers(Modifier.PUBLIC)
+                    .addSuperinterface(ParameterizedTypeName.get(ClassName.get(Finder.class), TypeName.get(element.asType())))
                     .addMethod(bindViewMethodSpecBuilder.build())
                     .build();
             JavaFile javaFile = JavaFile.builder(getPackageName(typeElement), typeSpec).build();
