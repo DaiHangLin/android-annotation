@@ -95,3 +95,8 @@ public @interface ContentView {
 
 ##### 学习编译期注解完成findviewbyid
 [链接](https://github.com/DaiHangLin/android-annotation/blob/master/classannotation.md)
+
+##### 优化注册方式
+提供统一的静态方法注册，使用者不需要关心内部实现
+
+[链家](https://github.com/DaiHangLin/android-annotation/blob/optimize/classannotation.md)
