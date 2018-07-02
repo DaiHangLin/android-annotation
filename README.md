@@ -99,4 +99,4 @@ public @interface ContentView {
 ##### 优化注册方式
 提供统一的静态方法注册，使用者不需要关心内部实现
 
-[链家](https://github.com/DaiHangLin/android-annotation/blob/optimize/classannotation.md)
+[链家](https://github.com/DaiHangLin/android-annotation/blob/optimize/optimize.md)
