@@ -29,6 +29,12 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             />
+        <Button
+            android:id="@+id/rotatevideo"
+            android:text="rotatevideo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            />
     </android.support.v7.widget.ButtonBarLayout>
 
 </android.support.constraint.ConstraintLayout>

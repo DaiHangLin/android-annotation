@@ -31,6 +31,9 @@ public class RuntimeAnnotionActivity extends AppCompatActivity {
     @BindView(R.id.classAnnotionacttivity)
     private Button btnClassAnnotionacttivity;
 
+    @BindView(R.id.rotatevideo)
+    private Button btnRotateVideo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +68,11 @@ public class RuntimeAnnotionActivity extends AppCompatActivity {
         });
         btnClassAnnotionacttivity.setOnClickListener(l -> {
             Intent intent = new Intent(RuntimeAnnotionActivity.this, ClassAnnotationActivity.class);
+            startActivity(intent);
+        });
+
+        btnRotateVideo.setOnClickListener(l -> {
+            Intent intent = new Intent(RuntimeAnnotionActivity.this, RotateVideoActivity.class);
             startActivity(intent);
         });
     }
