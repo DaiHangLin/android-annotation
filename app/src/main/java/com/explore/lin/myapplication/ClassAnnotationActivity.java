@@ -8,6 +8,8 @@ import android.widget.TextView;
 import com.explore.lin.processorlib.ClassBindActivity;
 import com.explore.lin.processorlib.ClassBindView;
 
+import annotion.FinderInject;
+
 /**
  * @author lin
  * @date 18/6/28
@@ -30,7 +32,7 @@ public class ClassAnnotationActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_b);
-        BindViewFor_ClassAnnotationActivity.bind(this);
+        FinderInject.inject(this);
         tv1.setText("class annotation build success");
     }
 }
